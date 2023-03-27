@@ -1,6 +1,7 @@
 def substring(word, dictionary)
   result = []
   word = word.split(" ")
+  word = word.map{ |element| element.downcase}
 
   word.each do |element|
     dictionary.each {|one| result.push(one) if element.include?(one)}
